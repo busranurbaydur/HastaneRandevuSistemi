@@ -135,6 +135,7 @@ namespace HastaneRandevuSistemiUI
             this.buttonDoktorEkle.TabIndex = 12;
             this.buttonDoktorEkle.Text = "EKLE";
             this.buttonDoktorEkle.UseVisualStyleBackColor = true;
+            this.buttonDoktorEkle.Click += new System.EventHandler(this.buttonDoktorEkle_Click);
             // 
             // label6
             // 

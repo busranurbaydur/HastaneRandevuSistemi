@@ -38,5 +38,19 @@ namespace HastaneRandevuSistemiUI
             
 
         }
+
+        private void buttonDoktorEkle_Click(object sender, EventArgs e)
+        {
+            Doktor yeniDoktor = new Doktor()
+            {
+                DoktorAdi = textBoxDoktorAdiEkle.Text.Trim(),
+                DoktorSoyadi = textBoxDoktorSoyadiEkle.Text.Trim(),
+               // Brans = Enum.GetValues(),
+                Email = textBoxDoktorEmailEkle.Text,
+                Telefon = maskedTextBoxDoktorTelEkle.Text,
+                TCNumarasi = textBoxDoktorTcEkle.Text
+            };
+            
+        }
     }
 }
