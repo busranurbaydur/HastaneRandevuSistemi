@@ -28,5 +28,10 @@ namespace HastaneRandevuSistemiEntities
 
         public virtual List<Randevu> RandevuList { get; set; }
 
+        public override string ToString()
+        {
+            return $"{this.TCNumarasi} {this.HastaAdi} {this.HastaSoyadi}";
+        }
+
     }
 }

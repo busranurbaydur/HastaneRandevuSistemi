@@ -16,7 +16,7 @@ namespace HastaneRandevuSistemiUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDoktor());
+            Application.Run(new FormGiris());
         }
     }
 }

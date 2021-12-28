@@ -32,5 +32,9 @@ namespace HastaneRandevuSistemiEntities
         public decimal Maas { get ; set ; }
 
         public virtual List<Randevu> RandevuList { get; set; }
+        public override string ToString()
+        {
+            return $"Dr. {this.DoktorAdi} {this.DoktorSoyadi}";
+        }
     }
 }

@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DoktorManager.cs" />
     <Compile Include="EnumManager.cs" />
+    <Compile Include="HastaManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

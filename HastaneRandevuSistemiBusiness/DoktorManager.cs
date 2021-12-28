@@ -46,5 +46,17 @@ namespace HastaneRandevuSistemiBusiness
             }
         }
 
+        public List<Doktor> BransaGoreDoktorlariGetir(Branslar brans)
+        {
+            try
+            {
+                return myDbContext.Doktorlar.Where(x => x.Brans == brans).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
