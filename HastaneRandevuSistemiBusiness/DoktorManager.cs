@@ -2,6 +2,7 @@
 using HastaneRandevuSistemiEntities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,5 +59,21 @@ namespace HastaneRandevuSistemiBusiness
                 throw ex;
             }
         }
+
+        public Doktor DoktoruIdyeGoreBul(int id)
+        {
+            try
+            {
+                Doktor dr = myDbContext.Doktorlar.FirstOrDefault(x => x.DoktorId == id);
+                return dr;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
+
 }

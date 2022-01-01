@@ -20,4 +20,6 @@ namespace HastaneRandevuSistemiEntities
         Ortopedi,
         Kardiyoloji
     }
+   
+    
 }
