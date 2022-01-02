@@ -35,5 +35,12 @@ namespace HastaneRandevuSistemiUI
             this.Hide();
             frmRandevu.Show();
         }
+
+        private void buttonHastaCagir_Click(object sender, EventArgs e)
+        {
+            FormHastaCagir frmHastaCagir = new FormHastaCagir();
+            this.Hide();
+            frmHastaCagir.Show();
+        }
     }
 }
