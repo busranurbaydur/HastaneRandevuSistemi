@@ -19,19 +19,20 @@ namespace HastaneRandevuSistemiBusiness
             try
             {
                 List<Randevu> rndList = new List<Randevu>();
+                List<Randevu> returnList = new List<Randevu>();
 
                 rndList = myDBContext.Randevular.Where(x => x.DoktorId == dr.DoktorId).ToList();
                 //burada foreach kullanmadık Çünkü foreach döngüsünde koleksiyon bozulamaz. Oysa biz burada tarihi eşleşmeyen randevuları listemizden sileceğiz
-                for (int i = 0; i < rndList.Count; i++)
+                foreach (Randevu item in rndList)
                 {
-                    if (rndList[i].RandevuTarihi.ToShortDateString()
-                        != trh.ToShortDateString())
+                    if (item.RandevuTarihi.ToShortDateString()
+                        == trh.ToShortDateString())
                     {
-                        rndList.Remove(rndList[i]);
+                        returnList.Add(item);
                     }
                 }
 
-                return rndList;
+                return returnList;
             }
             catch (Exception ex)
             {

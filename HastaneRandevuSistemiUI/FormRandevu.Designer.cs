@@ -51,6 +51,11 @@ namespace HastaneRandevuSistemiUI
             this.comboBoxCiktiAlDrSec = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.listViewAlinanRandevular = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPageRandevuIslem.SuspendLayout();
             this.groupBoxServis.SuspendLayout();
@@ -74,6 +79,7 @@ namespace HastaneRandevuSistemiUI
             // tabPageRandevuIslem
             // 
             this.tabPageRandevuIslem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPageRandevuIslem.Controls.Add(this.listViewAlinanRandevular);
             this.tabPageRandevuIslem.Controls.Add(this.groupBoxServis);
             this.tabPageRandevuIslem.Controls.Add(this.groupBoxRandevu);
             this.tabPageRandevuIslem.Controls.Add(this.groupBoxHastaIslemleri);
@@ -244,6 +250,7 @@ namespace HastaneRandevuSistemiUI
             this.tabPageCiktiAl.TabIndex = 1;
             this.tabPageCiktiAl.Text = "Çıktı Al";
             this.tabPageCiktiAl.UseVisualStyleBackColor = true;
+            this.tabPageCiktiAl.Leave += new System.EventHandler(this.tabPageCiktiAl_Leave);
             // 
             // label6
             // 
@@ -299,6 +306,36 @@ namespace HastaneRandevuSistemiUI
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // listViewAlinanRandevular
+            // 
+            this.listViewAlinanRandevular.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewAlinanRandevular.HideSelection = false;
+            this.listViewAlinanRandevular.Location = new System.Drawing.Point(17, 384);
+            this.listViewAlinanRandevular.Name = "listViewAlinanRandevular";
+            this.listViewAlinanRandevular.Size = new System.Drawing.Size(520, 127);
+            this.listViewAlinanRandevular.TabIndex = 1;
+            this.listViewAlinanRandevular.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Doktor";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Hasta";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Servis";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Randevu Tarihi";
+            // 
             // FormRandevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,5 +384,10 @@ namespace HastaneRandevuSistemiUI
         private System.Windows.Forms.ComboBox comboBoxCiktiAlDrSec;
         private System.Windows.Forms.Label label5;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.ListView listViewAlinanRandevular;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

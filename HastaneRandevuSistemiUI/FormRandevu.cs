@@ -29,8 +29,7 @@ namespace HastaneRandevuSistemiUI
             HastaListBoxiniDoldur();
             DateTimePickeriAyarla();
             DoktorlariComboBoxCiktiAlDrSeceDoldur();
-
-
+            comboBoxCiktiAlDrSec.SelectedIndex = -1;
 
         }
         private void DoktorlariComboBoxCiktiAlDrSeceDoldur()
@@ -133,7 +132,7 @@ namespace HastaneRandevuSistemiUI
             }
             else
             {
-                listBoxDoktorlar.DataSource = doktorManager.TumAktifDoktorlariGetir();
+                listBoxDoktorlar.DataSource = null;
             }
             listBoxDoktorlar.SelectedIndex = -1;
             DateTimePickeriAyarla();
@@ -160,7 +159,7 @@ namespace HastaneRandevuSistemiUI
 
         private void dateTimePickerRandevuTarihiAyarla_ValueChanged(object sender, EventArgs e)
         {
-            DateTimePickeriAyarla();
+            
             ucRandevuSaat1.DisaridanGelenTarih = dateTimePickerRandevuTarihiAyarla.Value;
             ucRandevuSaat1.Temizle();
         }
@@ -208,7 +207,7 @@ namespace HastaneRandevuSistemiUI
                     ListVieweRandevuyuEkle(yeniRandevu);
                     // temizlik
                     ucRandevuSaat1.Temizle();
-                    dateTimePickerRandevuTarihiAyarla.Value = DateTime.Now;
+                    //dateTimePickerRandevuTarihiAyarla.Value = DateTime.Now;
                     RandevuGroupBoxPasiflestir();
                     ServisGroupBoxPasiflestir();
                     listBoxHastalar.SelectedIndex = -1;
@@ -235,43 +234,46 @@ namespace HastaneRandevuSistemiUI
             li.SubItems.Add(randevu.HastaAdSoyad);
             li.SubItems.Add(randevu.RandevuTarihi.ToString("dd.MM.yyyy HH:mm"));
             li.Tag = randevu;
-           
+            listViewAlinanRandevular.Items.Add(li);
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
         {
+            ucRandevuSaat1.Temizle();
             // Temizlik Randevu Al
             RandevuGroupBoxPasiflestir();
-            ucRandevuSaat1.Temizle();
+            
             comboBoxServisSec.SelectedIndex = -1;
             listBoxDoktorlar.SelectedIndex = -1;
             ServisGroupBoxPasiflestir();
             listBoxHastalar.SelectedIndex = -1;
+
+            btnCiktiAl.Enabled = false;
+            dateTimePickerCiktiAl.Value = DateTime.Now;
+            comboBoxCiktiAlDrSec.SelectedIndex = -1;
         }
 
         private void comboBoxCiktiAlDrSec_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                try
+                if (comboBoxCiktiAlDrSec.SelectedIndex >= 0)
                 {
-                    if (comboBoxCiktiAlDrSec.SelectedIndex < 0)
-                    {
-                        throw new Exception("Lütfen doktor seçiniz.");
-                    }
                     Doktor secilenDr = doktorManagerim.DoktoruIdyeGoreBul((int)comboBoxCiktiAlDrSec.SelectedValue);
                     CiktiAlButonununAktifPasifliginiAyarla(secilenDr, dateTimePickerCiktiAl.Value);
-                }
-                catch (Exception)
-                {
 
-                    throw;
                 }
+                else
+                {
+                    dateTimePickerCiktiAl.Value = DateTime.Now;
+                    btnCiktiAl.Enabled = false;
+                }
+
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("HATA! - " + ex.Message);
+                MessageBox.Show("HATA: " + ex.Message);
             }
         }
 
@@ -285,7 +287,7 @@ namespace HastaneRandevuSistemiUI
                 if (rndList.Count > 0)
                 {
                     btnCiktiAl.Enabled = true;
-                    btnCiktiAl.BackColor = Color.DeepSkyBlue;
+                    btnCiktiAl.BackColor = Color.Pink;
                 }
                 else
                 {
@@ -386,6 +388,11 @@ namespace HastaneRandevuSistemiUI
 
                 MessageBox.Show("HATA! - " + ex.Message);
             }
+        }
+
+        private void tabPageCiktiAl_Leave(object sender, EventArgs e)
+        {
+            comboBoxCiktiAlDrSec.SelectedIndex = -1;
         }
     }
 }

@@ -22,9 +22,10 @@ namespace HastaneRandevuSistemiUI
         DoktorManager drManager = new DoktorManager();
         RandevuManager rndManager = new RandevuManager();
         Doktor secilenDoktor { get; set; }
-
+        public bool FormLoadBittiMi { get; set; } = false;
         private void FormHastaCagir_Load(object sender, EventArgs e)
         {
+            FormLoadBittiMi = false;
             // comboBox
             ComboyaDoktorlariGetir();
 
@@ -37,6 +38,7 @@ namespace HastaneRandevuSistemiUI
 
             // Doktor
             secilenDoktor = null;
+            FormLoadBittiMi = true;
         }
         
         private void ComboyaDoktorlariGetir()
@@ -49,9 +51,23 @@ namespace HastaneRandevuSistemiUI
 
         private void comboBoxDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
+            labelHasta.Text = "---";
             if (comboBoxDoktor.SelectedIndex >= 0)
             {
-                secilenDoktor = drManager.DoktoruIdyeGoreBul((int)comboBoxDoktor.SelectedValue);
+                secilenDoktor = drManager.DoktoruIdyeGoreBul(
+                    (int)comboBoxDoktor.SelectedValue);
+
+                // secilen doktorun  bugüne ait randevusu yoksa burada bir messagebox ile randevusu yoktur diye mesaj verilmelidir ve timer stop edilmelidir.
+
+                if (rndManager.DoktorunRandevulariniTariheGoreGetir(secilenDoktor, DateTime.Now).Count == 0
+                    && FormLoadBittiMi)
+
+                {
+                    MessageBox.Show($"{secilenDoktor.ToString()} adlı doktorun bugün hiç randevusu bulunmuyor!");
+                    timer1.Stop();
+                    btnBasla.Enabled = true;
+                    btnDurdur.Enabled = false;
+                }
 
             }
         }
@@ -63,16 +79,18 @@ namespace HastaneRandevuSistemiUI
 
             btnDurdur.Enabled = true;
             btnBasla.Enabled = false;
-
+            comboBoxDoktor.Enabled = false;
 
         }
 
         private void btnDurdur_Click(object sender, EventArgs e)
         {
             timer1.Stop(); // ya da timer1.Enabled=false;
-            btnDurdur.Enabled = false;
             btnBasla.Enabled = true;
+            btnDurdur.Enabled = false;
+            
             labelHasta.Font = new Font("Arial", 35);
+            comboBoxDoktor.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -80,35 +98,43 @@ namespace HastaneRandevuSistemiUI
             Font BuyukFont = new Font("Arial", 45);
             Font NormalFont = new Font("Arial", 40);
 
-            if (DateTime.Now.Second % 2 == 0)
-            {
-                labelHasta.Font = BuyukFont;
-                labelHasta.ForeColor = Color.Red;
-            }
-            else
-            {
-                labelHasta.Font = NormalFont;
-                labelHasta.ForeColor = Color.Blue;
-            }
-
             if (secilenDoktor != null)
             {
-                // Doktorun seçilen bugüne ait randevularını bulalım:
+                // Doktorun bugüne ait randevularını bulalım
 
-                List<Randevu> drRandevulari = rndManager.DoktorunRandevulariniTariheGoreGetir(secilenDoktor, DateTime.Now);
+                List<Randevu> drRandevulari =
+                    rndManager.DoktorunRandevulariniTariheGoreGetir(secilenDoktor, DateTime.Now);
 
                 if (drRandevulari.Count > 0)
                 {
-                    Randevu bulunanRandevu = drRandevulari.FirstOrDefault(x => x.RandevuTarihi.ToString("HH") == DateTime.Now.Hour.ToString() && x.RandevuTarihi.Minute < DateTime.Now.Minute + 2 && x.RandevuTarihi.Minute > DateTime.Now.Minute - 2);
+                    Randevu bulunanRandevu =
+                        drRandevulari.FirstOrDefault(
+                            x => x.RandevuTarihi.ToString("HH") ==
+                            DateTime.Now.Hour.ToString()
+                            &&
+                            x.RandevuTarihi.Minute <
+                            DateTime.Now.Minute + 2
+                            &&
+                            x.RandevuTarihi.Minute >
+                            DateTime.Now.Minute - 2
+                            );
 
                     if (bulunanRandevu != null)
                     {
                         labelHasta.Text = $"{bulunanRandevu.Hasta.HastaAdi} {bulunanRandevu.Hasta.HastaSoyadi}";
-                    }
+                        labelHasta.ForeColor = Color.Red;
 
+                        if (DateTime.Now.Second % 2 == 0)
+                        {
+                            labelHasta.Font = BuyukFont;
+                        }
+                        else
+                        {
+                            labelHasta.Font = NormalFont;
+                        }
+                    }
                 }
             }
-
         }
     }
 }

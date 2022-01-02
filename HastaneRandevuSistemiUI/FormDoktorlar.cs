@@ -18,9 +18,10 @@ namespace HastaneRandevuSistemiUI
         {
             InitializeComponent();
         }
-
+        DoktorManager drManager = new DoktorManager();
         private void FormDoktorlar_Load(object sender, EventArgs e)
         {
+            DoktorGrideVerileriGetir();
             comboBoxDoktorBransEkle.DropDownStyle = ComboBoxStyle.DropDownList;
 
             //comboBoxDrBranslar.DisplayMember = "TheValue";
@@ -29,7 +30,7 @@ namespace HastaneRandevuSistemiUI
             //comboBoxDrBranslar.SelectedValue = (int)Branslar.BransYok;
             comboBoxDoktorBransEkle.DataSource = Enum.GetValues(typeof(Branslar));
             maskedTextBoxDoktorTelEkle.Mask = @"\0\5##-###-##-##";
-            DoktorGrideVerileriGetir();
+           
             // maskedTextBoxDoktorTelEkle.Mask = "(500)-000-00-00";
 
         }
@@ -37,10 +38,8 @@ namespace HastaneRandevuSistemiUI
         private void comboBoxDoktorBransEkle_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
-
         }
-        DoktorManager drManager = new DoktorManager();
+        
         private void buttonDoktorEkle_Click(object sender, EventArgs e)
         {
             try
@@ -73,20 +72,19 @@ namespace HastaneRandevuSistemiUI
                     Telefon = maskedTextBoxDoktorTelEkle.Text.Replace("-", ""),
                     TCNumarasi = textBoxDoktorTcEkle.Text,
                     Brans = drBransi,
-                     AktifMi = true
+                    // AktifMi = true
                 };
                 //sisteme ekleme yapması gerekiyor..
 
                 if (drManager.YeniDoktorEkle(yeniDoktor))
                 {
                     MessageBox.Show($"{textBoxDoktorAdiEkle.Text.Trim()}  {textBoxDoktorSoyadiEkle.Text.Trim()} sisteme yeni doktor olarak eklenmiştir.. ");
+
+
+                    DoktorEkleSayfasiTemizle();
+                    DoktorGrideVerileriGetir();
                 }
 
-                //temizlik
-                
-                
-                DoktorEkleSayfasiTemizle();
-                DoktorGrideVerileriGetir();
             }
             catch (Exception ex)
             {
