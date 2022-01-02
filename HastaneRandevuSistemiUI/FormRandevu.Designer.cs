@@ -44,18 +44,25 @@ namespace HastaneRandevuSistemiUI
             this.listBoxHastalar = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxHastaTCArama = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageCiktiAl = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePickerCiktiAl = new System.Windows.Forms.DateTimePicker();
+            this.btnCiktiAl = new System.Windows.Forms.Button();
+            this.comboBoxCiktiAlDrSec = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.tabControl1.SuspendLayout();
             this.tabPageRandevuIslem.SuspendLayout();
             this.groupBoxServis.SuspendLayout();
             this.groupBoxRandevu.SuspendLayout();
             this.groupBoxHastaIslemleri.SuspendLayout();
+            this.tabPageCiktiAl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPageRandevuIslem);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPageCiktiAl);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -150,9 +157,13 @@ namespace HastaneRandevuSistemiUI
             // ucRandevuSaat1
             // 
             this.ucRandevuSaat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ucRandevuSaat1.DisaridanGelenTarih = new System.DateTime(2022, 1, 2, 15, 19, 34, 447);
+            this.ucRandevuSaat1.Doktorum = null;
             this.ucRandevuSaat1.Location = new System.Drawing.Point(27, 108);
             this.ucRandevuSaat1.Margin = new System.Windows.Forms.Padding(2);
             this.ucRandevuSaat1.Name = "ucRandevuSaat1";
+            this.ucRandevuSaat1.RandevuAlmaAktifMi = false;
+            this.ucRandevuSaat1.SecilenRandevuTarihi = new System.DateTime(((long)(0)));
             this.ucRandevuSaat1.Size = new System.Drawing.Size(303, 243);
             this.ucRandevuSaat1.TabIndex = 2;
             // 
@@ -218,16 +229,75 @@ namespace HastaneRandevuSistemiUI
             this.textBoxHastaTCArama.TabIndex = 0;
             this.textBoxHastaTCArama.TextChanged += new System.EventHandler(this.textBoxHastaTCArama_TextChanged);
             // 
-            // tabPage2
+            // tabPageCiktiAl
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(954, 597);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageCiktiAl.Controls.Add(this.label6);
+            this.tabPageCiktiAl.Controls.Add(this.dateTimePickerCiktiAl);
+            this.tabPageCiktiAl.Controls.Add(this.btnCiktiAl);
+            this.tabPageCiktiAl.Controls.Add(this.comboBoxCiktiAlDrSec);
+            this.tabPageCiktiAl.Controls.Add(this.label5);
+            this.tabPageCiktiAl.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCiktiAl.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPageCiktiAl.Name = "tabPageCiktiAl";
+            this.tabPageCiktiAl.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageCiktiAl.Size = new System.Drawing.Size(954, 597);
+            this.tabPageCiktiAl.TabIndex = 1;
+            this.tabPageCiktiAl.Text = "Çıktı Al";
+            this.tabPageCiktiAl.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(54, 88);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "TARİH SEÇİNİZ:";
+            // 
+            // dateTimePickerCiktiAl
+            // 
+            this.dateTimePickerCiktiAl.Location = new System.Drawing.Point(149, 83);
+            this.dateTimePickerCiktiAl.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerCiktiAl.Name = "dateTimePickerCiktiAl";
+            this.dateTimePickerCiktiAl.Size = new System.Drawing.Size(151, 20);
+            this.dateTimePickerCiktiAl.TabIndex = 8;
+            this.dateTimePickerCiktiAl.ValueChanged += new System.EventHandler(this.dateTimePickerCiktiAl_ValueChanged);
+            // 
+            // btnCiktiAl
+            // 
+            this.btnCiktiAl.Location = new System.Drawing.Point(52, 127);
+            this.btnCiktiAl.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCiktiAl.Name = "btnCiktiAl";
+            this.btnCiktiAl.Size = new System.Drawing.Size(353, 39);
+            this.btnCiktiAl.TabIndex = 7;
+            this.btnCiktiAl.Text = "DOKTOR RANDEVU ÇIKTISI AL";
+            this.btnCiktiAl.UseVisualStyleBackColor = true;
+            this.btnCiktiAl.Click += new System.EventHandler(this.btnCiktiAl_Click);
+            // 
+            // comboBoxCiktiAlDrSec
+            // 
+            this.comboBoxCiktiAlDrSec.FormattingEnabled = true;
+            this.comboBoxCiktiAlDrSec.Location = new System.Drawing.Point(149, 35);
+            this.comboBoxCiktiAlDrSec.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxCiktiAlDrSec.Name = "comboBoxCiktiAlDrSec";
+            this.comboBoxCiktiAlDrSec.Size = new System.Drawing.Size(256, 21);
+            this.comboBoxCiktiAlDrSec.TabIndex = 6;
+            this.comboBoxCiktiAlDrSec.SelectedIndexChanged += new System.EventHandler(this.comboBoxCiktiAlDrSec_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 38);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "DOKTOR SEÇİNİZ:";
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // FormRandevu
             // 
@@ -247,6 +317,8 @@ namespace HastaneRandevuSistemiUI
             this.groupBoxRandevu.PerformLayout();
             this.groupBoxHastaIslemleri.ResumeLayout(false);
             this.groupBoxHastaIslemleri.PerformLayout();
+            this.tabPageCiktiAl.ResumeLayout(false);
+            this.tabPageCiktiAl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,7 +333,7 @@ namespace HastaneRandevuSistemiUI
         private System.Windows.Forms.ListBox listBoxHastalar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxHastaTCArama;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageCiktiAl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxDoktorlar;
         private System.Windows.Forms.ComboBox comboBoxServisSec;
@@ -269,5 +341,11 @@ namespace HastaneRandevuSistemiUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePickerRandevuTarihiAyarla;
         private UCRandevuSaat ucRandevuSaat1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePickerCiktiAl;
+        private System.Windows.Forms.Button btnCiktiAl;
+        private System.Windows.Forms.ComboBox comboBoxCiktiAlDrSec;
+        private System.Windows.Forms.Label label5;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
