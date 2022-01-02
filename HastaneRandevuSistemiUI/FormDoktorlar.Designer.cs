@@ -46,10 +46,13 @@ namespace HastaneRandevuSistemiUI
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.anaSayfayaDonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPageDoktorListele.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDoktorListele)).BeginInit();
             this.tabPageDoktorEkle.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -58,18 +61,21 @@ namespace HastaneRandevuSistemiUI
             this.tabControl1.Controls.Add(this.tabPageDoktorEkle);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(647, 422);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageDoktorListele
             // 
             this.tabPageDoktorListele.Controls.Add(this.dataGridViewDoktorListele);
-            this.tabPageDoktorListele.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDoktorListele.Controls.Add(this.menuStrip1);
+            this.tabPageDoktorListele.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDoktorListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageDoktorListele.Name = "tabPageDoktorListele";
-            this.tabPageDoktorListele.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDoktorListele.Size = new System.Drawing.Size(792, 421);
+            this.tabPageDoktorListele.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageDoktorListele.Size = new System.Drawing.Size(639, 396);
             this.tabPageDoktorListele.TabIndex = 0;
             this.tabPageDoktorListele.Text = "Doktor Listesi";
             this.tabPageDoktorListele.UseVisualStyleBackColor = true;
@@ -80,12 +86,13 @@ namespace HastaneRandevuSistemiUI
             this.dataGridViewDoktorListele.AllowUserToDeleteRows = false;
             this.dataGridViewDoktorListele.AllowUserToOrderColumns = true;
             this.dataGridViewDoktorListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDoktorListele.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewDoktorListele.Location = new System.Drawing.Point(7, 39);
+            this.dataGridViewDoktorListele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDoktorListele.Name = "dataGridViewDoktorListele";
             this.dataGridViewDoktorListele.ReadOnly = true;
             this.dataGridViewDoktorListele.RowHeadersWidth = 51;
             this.dataGridViewDoktorListele.RowTemplate.Height = 24;
-            this.dataGridViewDoktorListele.Size = new System.Drawing.Size(771, 398);
+            this.dataGridViewDoktorListele.Size = new System.Drawing.Size(615, 344);
             this.dataGridViewDoktorListele.TabIndex = 0;
             // 
             // tabPageDoktorEkle
@@ -103,35 +110,39 @@ namespace HastaneRandevuSistemiUI
             this.tabPageDoktorEkle.Controls.Add(this.label3);
             this.tabPageDoktorEkle.Controls.Add(this.label2);
             this.tabPageDoktorEkle.Controls.Add(this.label1);
-            this.tabPageDoktorEkle.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDoktorEkle.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDoktorEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageDoktorEkle.Name = "tabPageDoktorEkle";
-            this.tabPageDoktorEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDoktorEkle.Size = new System.Drawing.Size(792, 421);
+            this.tabPageDoktorEkle.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageDoktorEkle.Size = new System.Drawing.Size(592, 340);
             this.tabPageDoktorEkle.TabIndex = 1;
             this.tabPageDoktorEkle.Text = "Doktor Ekle";
             this.tabPageDoktorEkle.UseVisualStyleBackColor = true;
             // 
             // maskedTextBoxDoktorTelEkle
             // 
-            this.maskedTextBoxDoktorTelEkle.Location = new System.Drawing.Point(139, 234);
+            this.maskedTextBoxDoktorTelEkle.Location = new System.Drawing.Point(104, 190);
+            this.maskedTextBoxDoktorTelEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBoxDoktorTelEkle.Name = "maskedTextBoxDoktorTelEkle";
-            this.maskedTextBoxDoktorTelEkle.Size = new System.Drawing.Size(186, 22);
+            this.maskedTextBoxDoktorTelEkle.Size = new System.Drawing.Size(140, 20);
             this.maskedTextBoxDoktorTelEkle.TabIndex = 14;
             // 
             // comboBoxDoktorBransEkle
             // 
             this.comboBoxDoktorBransEkle.FormattingEnabled = true;
-            this.comboBoxDoktorBransEkle.Location = new System.Drawing.Point(139, 184);
+            this.comboBoxDoktorBransEkle.Location = new System.Drawing.Point(104, 150);
+            this.comboBoxDoktorBransEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxDoktorBransEkle.Name = "comboBoxDoktorBransEkle";
-            this.comboBoxDoktorBransEkle.Size = new System.Drawing.Size(186, 24);
+            this.comboBoxDoktorBransEkle.Size = new System.Drawing.Size(140, 21);
             this.comboBoxDoktorBransEkle.TabIndex = 13;
             this.comboBoxDoktorBransEkle.SelectedIndexChanged += new System.EventHandler(this.comboBoxDoktorBransEkle_SelectedIndexChanged);
             // 
             // buttonDoktorEkle
             // 
-            this.buttonDoktorEkle.Location = new System.Drawing.Point(139, 348);
+            this.buttonDoktorEkle.Location = new System.Drawing.Point(104, 283);
+            this.buttonDoktorEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDoktorEkle.Name = "buttonDoktorEkle";
-            this.buttonDoktorEkle.Size = new System.Drawing.Size(186, 49);
+            this.buttonDoktorEkle.Size = new System.Drawing.Size(140, 40);
             this.buttonDoktorEkle.TabIndex = 12;
             this.buttonDoktorEkle.Text = "EKLE";
             this.buttonDoktorEkle.UseVisualStyleBackColor = true;
@@ -140,99 +151,130 @@ namespace HastaneRandevuSistemiUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 184);
+            this.label6.Location = new System.Drawing.Point(20, 150);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Branş : ";
             // 
             // textBoxDoktorEmailEkle
             // 
-            this.textBoxDoktorEmailEkle.Location = new System.Drawing.Point(139, 290);
+            this.textBoxDoktorEmailEkle.Location = new System.Drawing.Point(104, 236);
+            this.textBoxDoktorEmailEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDoktorEmailEkle.Name = "textBoxDoktorEmailEkle";
-            this.textBoxDoktorEmailEkle.Size = new System.Drawing.Size(186, 22);
+            this.textBoxDoktorEmailEkle.Size = new System.Drawing.Size(140, 20);
             this.textBoxDoktorEmailEkle.TabIndex = 9;
             // 
             // textBoxDoktorSoyadiEkle
             // 
-            this.textBoxDoktorSoyadiEkle.Location = new System.Drawing.Point(139, 125);
+            this.textBoxDoktorSoyadiEkle.Location = new System.Drawing.Point(104, 102);
+            this.textBoxDoktorSoyadiEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDoktorSoyadiEkle.Name = "textBoxDoktorSoyadiEkle";
-            this.textBoxDoktorSoyadiEkle.Size = new System.Drawing.Size(186, 22);
+            this.textBoxDoktorSoyadiEkle.Size = new System.Drawing.Size(140, 20);
             this.textBoxDoktorSoyadiEkle.TabIndex = 7;
             // 
             // textBoxDoktorAdiEkle
             // 
-            this.textBoxDoktorAdiEkle.Location = new System.Drawing.Point(139, 73);
+            this.textBoxDoktorAdiEkle.Location = new System.Drawing.Point(104, 59);
+            this.textBoxDoktorAdiEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDoktorAdiEkle.Name = "textBoxDoktorAdiEkle";
-            this.textBoxDoktorAdiEkle.Size = new System.Drawing.Size(186, 22);
+            this.textBoxDoktorAdiEkle.Size = new System.Drawing.Size(140, 20);
             this.textBoxDoktorAdiEkle.TabIndex = 6;
             // 
             // textBoxDoktorTcEkle
             // 
-            this.textBoxDoktorTcEkle.Location = new System.Drawing.Point(139, 19);
+            this.textBoxDoktorTcEkle.Location = new System.Drawing.Point(104, 15);
+            this.textBoxDoktorTcEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDoktorTcEkle.Name = "textBoxDoktorTcEkle";
-            this.textBoxDoktorTcEkle.Size = new System.Drawing.Size(186, 22);
+            this.textBoxDoktorTcEkle.Size = new System.Drawing.Size(140, 20);
             this.textBoxDoktorTcEkle.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 295);
+            this.label5.Location = new System.Drawing.Point(20, 240);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Email : ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 239);
+            this.label4.Location = new System.Drawing.Point(20, 194);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Telefon : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 125);
+            this.label3.Location = new System.Drawing.Point(20, 102);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Soyad : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 73);
+            this.label2.Location = new System.Drawing.Point(20, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 17);
+            this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ad : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 19);
+            this.label1.Location = new System.Drawing.Point(20, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "T.C.";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anaSayfayaDonToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(2, 2);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(635, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // anaSayfayaDonToolStripMenuItem
+            // 
+            this.anaSayfayaDonToolStripMenuItem.Name = "anaSayfayaDonToolStripMenuItem";
+            this.anaSayfayaDonToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.anaSayfayaDonToolStripMenuItem.Text = "AnaSayfaya Don";
+            this.anaSayfayaDonToolStripMenuItem.Click += new System.EventHandler(this.anaSayfayaDonToolStripMenuItem_Click);
+            // 
             // FormDoktor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(647, 422);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDoktor";
             this.Text = "Doktor İşlemleri";
             this.Load += new System.EventHandler(this.FormDoktorlar_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageDoktorListele.ResumeLayout(false);
+            this.tabPageDoktorListele.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDoktorListele)).EndInit();
             this.tabPageDoktorEkle.ResumeLayout(false);
             this.tabPageDoktorEkle.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +298,8 @@ namespace HastaneRandevuSistemiUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem anaSayfayaDonToolStripMenuItem;
     }
 }
 

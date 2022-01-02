@@ -81,16 +81,18 @@ namespace HastaneRandevuSistemiUI
         {
             foreach (Button btnitem in tableLayoutPanelRandevuButonlar.Controls)
             {
+                //10:15
                 int dakika = 0;
                 int saat = 0;
                 if (btnitem.Text.Length > 3)
                 {
                     int.TryParse(btnitem.Text.Substring(3, 2), out dakika);
                     int.TryParse(btnitem.Text.Substring(0, 2), out saat);
+
                 }
 
-                // 10:15
-                if (DisaridanGelenTarih.ToShortDateString() == DateTime.Now.ToShortDateString())
+                if (DisaridanGelenTarih.ToShortDateString() ==
+                    DateTime.Now.ToShortDateString())
                 {
                     if (saat < DateTime.Now.Hour)
                     {
@@ -104,11 +106,11 @@ namespace HastaneRandevuSistemiUI
                             btnitem.BackColor = Color.DarkGray;
                             btnitem.Enabled = false;
                         }
-
                     }
                 }
             }
         }
+        
 
         private void DRveTrhyeGoreButonlarinAktifPasifIslemleriniYap()
         {
@@ -236,20 +238,32 @@ namespace HastaneRandevuSistemiUI
             SecilenRandevuTarihi = new DateTime(DisaridanGelenTarih.Year, DisaridanGelenTarih.Month, DisaridanGelenTarih.Day,
                 saat, dakika, 00);
             RandevuAlmaAktifMi = true;
+            MessageBox.Show("Saati Seçtiniz... Randevu Al işlemine devam edebilirsiniz...");
         }
 
         public void Temizle()
         {
-            RandevuAlmaAktifMi = false;
+            
             comboBoxSaatler.SelectedIndex = -1;
             RandevuButonlarinIsimleriniTemizle();
             RandevuButonlariniPasiflestir();
+            RandevuAlmaAktifMi = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             GecmisSaatlerinButonlariniPasiflestir();
+
+        }
+
+        private void button00_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UCRandevuSaat_Click(object sender, EventArgs e)
+        {
 
         }
     }

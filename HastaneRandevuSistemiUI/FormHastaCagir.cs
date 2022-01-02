@@ -136,5 +136,12 @@ namespace HastaneRandevuSistemiUI
                 }
             }
         }
+
+        private void anasayfaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGiris frmGiris = new FormGiris();
+            this.Hide();
+            frmGiris.Show();
+        }
     }
 }

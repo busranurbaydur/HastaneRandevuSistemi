@@ -118,6 +118,7 @@ namespace HastaneRandevuSistemiUI
             this.button00.TabIndex = 0;
             this.button00.Text = "button1";
             this.button00.UseVisualStyleBackColor = true;
+            this.button00.Click += new System.EventHandler(this.button00_Click);
             // 
             // UCRandevuSaat
             // 
@@ -131,6 +132,7 @@ namespace HastaneRandevuSistemiUI
             this.Name = "UCRandevuSaat";
             this.Size = new System.Drawing.Size(290, 254);
             this.Load += new System.EventHandler(this.UCRandevuSaat_Load);
+            this.Click += new System.EventHandler(this.UCRandevuSaat_Click);
             this.tableLayoutPanelRandevuButonlar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

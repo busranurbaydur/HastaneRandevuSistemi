@@ -36,13 +36,16 @@ namespace HastaneRandevuSistemiUI
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxDoktor = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.anasayfaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelHasta
             // 
             this.labelHasta.AutoSize = true;
             this.labelHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelHasta.Location = new System.Drawing.Point(105, 122);
+            this.labelHasta.Location = new System.Drawing.Point(81, 160);
             this.labelHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHasta.Name = "labelHasta";
             this.labelHasta.Size = new System.Drawing.Size(117, 63);
@@ -51,7 +54,7 @@ namespace HastaneRandevuSistemiUI
             // 
             // btnDurdur
             // 
-            this.btnDurdur.Location = new System.Drawing.Point(501, 51);
+            this.btnDurdur.Location = new System.Drawing.Point(477, 89);
             this.btnDurdur.Margin = new System.Windows.Forms.Padding(2);
             this.btnDurdur.Name = "btnDurdur";
             this.btnDurdur.Size = new System.Drawing.Size(73, 36);
@@ -61,7 +64,7 @@ namespace HastaneRandevuSistemiUI
             // 
             // btnBasla
             // 
-            this.btnBasla.Location = new System.Drawing.Point(373, 51);
+            this.btnBasla.Location = new System.Drawing.Point(349, 89);
             this.btnBasla.Margin = new System.Windows.Forms.Padding(2);
             this.btnBasla.Name = "btnBasla";
             this.btnBasla.Size = new System.Drawing.Size(73, 36);
@@ -72,7 +75,7 @@ namespace HastaneRandevuSistemiUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 29);
+            this.label1.Location = new System.Drawing.Point(11, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
@@ -82,11 +85,28 @@ namespace HastaneRandevuSistemiUI
             // comboBoxDoktor
             // 
             this.comboBoxDoktor.FormattingEnabled = true;
-            this.comboBoxDoktor.Location = new System.Drawing.Point(38, 66);
+            this.comboBoxDoktor.Location = new System.Drawing.Point(14, 104);
             this.comboBoxDoktor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDoktor.Name = "comboBoxDoktor";
             this.comboBoxDoktor.Size = new System.Drawing.Size(269, 21);
             this.comboBoxDoktor.TabIndex = 5;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anasayfaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // anasayfaToolStripMenuItem
+            // 
+            this.anasayfaToolStripMenuItem.Name = "anasayfaToolStripMenuItem";
+            this.anasayfaToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.anasayfaToolStripMenuItem.Text = "Anasayfaya Dön";
+            this.anasayfaToolStripMenuItem.Click += new System.EventHandler(this.anasayfaToolStripMenuItem_Click);
             // 
             // FormHastaCagir
             // 
@@ -98,9 +118,13 @@ namespace HastaneRandevuSistemiUI
             this.Controls.Add(this.btnBasla);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxDoktor);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormHastaCagir";
             this.Text = "FormHastaCagir";
             this.Load += new System.EventHandler(this.FormHastaCagir_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +138,7 @@ namespace HastaneRandevuSistemiUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxDoktor;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem anasayfaToolStripMenuItem;
     }
 }

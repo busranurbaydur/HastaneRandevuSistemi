@@ -163,8 +163,7 @@ namespace HastaneRandevuSistemiUI
             ucRandevuSaat1.DisaridanGelenTarih = dateTimePickerRandevuTarihiAyarla.Value;
             ucRandevuSaat1.Temizle();
         }
-
-        private void btnRandevuAl_Click(object sender, EventArgs e)
+         private void buttonRandevuAl_Click(object sender, EventArgs e)
         {
             try
             {
@@ -224,7 +223,7 @@ namespace HastaneRandevuSistemiUI
                 MessageBox.Show("HATA : " + ex.Message);
             }
         }
-
+       
         private void ListVieweRandevuyuEkle(Randevu yeniRandevu)
         {
             RandevuViewModel randevu = rndManager.RandevuyuViewModeleAktar(yeniRandevu);
@@ -394,5 +393,14 @@ namespace HastaneRandevuSistemiUI
         {
             comboBoxCiktiAlDrSec.SelectedIndex = -1;
         }
+
+        private void anaSayfayaDonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGiris frmGiris = new FormGiris();
+            this.Hide();
+            frmGiris.Show();
+        }
+
+       
     }
 }
