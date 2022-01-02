@@ -72,7 +72,8 @@ namespace HastaneRandevuSistemiUI
                     Email = textBoxDoktorEmailEkle.Text,
                     Telefon = maskedTextBoxDoktorTelEkle.Text.Replace("-", ""),
                     TCNumarasi = textBoxDoktorTcEkle.Text,
-                    Brans = drBransi
+                    Brans = drBransi,
+                     AktifMi = true
                 };
                 //sisteme ekleme yapması gerekiyor..
 

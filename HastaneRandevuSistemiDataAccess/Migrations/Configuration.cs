@@ -9,9 +9,6 @@
     {
         public Configuration()
         {
-            //eğer false kalırsa add- migration ile eklemmeiz gerekiyor.
-            // true olursa add migration eklememize gerek yok.
-
             AutomaticMigrationsEnabled = false;
         }
 

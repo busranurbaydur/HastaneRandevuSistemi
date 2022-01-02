@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _20211227 : DbMigration
+    public partial class data : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Doktors",
+                "dbo.Doktorlar",
                 c => new
                     {
                         DoktorId = c.Int(nullable: false, identity: true),
@@ -16,6 +16,7 @@
                         DoktorSoyadi = c.String(nullable: false, maxLength: 50),
                         Brans = c.Byte(nullable: false),
                         Maas = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        AktifMi = c.Boolean(nullable: false),
                         TCNumarasi = c.String(nullable: false, maxLength: 11),
                         Telefon = c.String(maxLength: 11),
                         Email = c.String(),
@@ -23,7 +24,7 @@
                 .PrimaryKey(t => t.DoktorId);
             
             CreateTable(
-                "dbo.Randevus",
+                "dbo.Randevular",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -32,13 +33,13 @@
                         RandevuTarihi = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Doktors", t => t.DoktorId, cascadeDelete: true)
-                .ForeignKey("dbo.Hastas", t => t.HastaId, cascadeDelete: true)
+                .ForeignKey("dbo.Doktorlar", t => t.DoktorId, cascadeDelete: true)
+                .ForeignKey("dbo.Hastalar", t => t.HastaId, cascadeDelete: true)
                 .Index(t => t.DoktorId)
                 .Index(t => t.HastaId);
             
             CreateTable(
-                "dbo.Hastas",
+                "dbo.Hastalar",
                 c => new
                     {
                         HastaId = c.Int(nullable: false, identity: true),
@@ -54,13 +55,13 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Randevus", "HastaId", "dbo.Hastas");
-            DropForeignKey("dbo.Randevus", "DoktorId", "dbo.Doktors");
-            DropIndex("dbo.Randevus", new[] { "HastaId" });
-            DropIndex("dbo.Randevus", new[] { "DoktorId" });
-            DropTable("dbo.Hastas");
-            DropTable("dbo.Randevus");
-            DropTable("dbo.Doktors");
+            DropForeignKey("dbo.Randevular", "HastaId", "dbo.Hastalar");
+            DropForeignKey("dbo.Randevular", "DoktorId", "dbo.Doktorlar");
+            DropIndex("dbo.Randevular", new[] { "HastaId" });
+            DropIndex("dbo.Randevular", new[] { "DoktorId" });
+            DropTable("dbo.Hastalar");
+            DropTable("dbo.Randevular");
+            DropTable("dbo.Doktorlar");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HastaneRandevuSistemiBusiness
             try
             {
                 //where ile sadece aktifler çekilecek bunu daha sonra yapacağız..
-                return myDbContext.Doktorlar.ToList();
+                return myDbContext.Doktorlar.Where(x => x.AktifMi).ToList();
             }
             catch (Exception ex)
             {
