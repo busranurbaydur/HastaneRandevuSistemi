@@ -42,10 +42,10 @@ namespace HastaneRandevuSistemiUI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabPageHastaListele = new System.Windows.Forms.TabPage();
             this.tabPageHastaEkle = new System.Windows.Forms.TabPage();
-            this.tabControlHastalar = new System.Windows.Forms.TabControl();
+            this.maskedTextBoxHastaTelEkle = new System.Windows.Forms.MaskedTextBox();
             this.textBoxHastaTCNoEkle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBoxHastaTelEkle = new System.Windows.Forms.MaskedTextBox();
+            this.tabControlHastalar = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHastalariListele)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabPageHastaListele.SuspendLayout();
@@ -55,10 +55,10 @@ namespace HastaneRandevuSistemiUI
             // 
             // buttonHastaEkle
             // 
-            this.buttonHastaEkle.Location = new System.Drawing.Point(104, 283);
+            this.buttonHastaEkle.Location = new System.Drawing.Point(226, 293);
             this.buttonHastaEkle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHastaEkle.Name = "buttonHastaEkle";
-            this.buttonHastaEkle.Size = new System.Drawing.Size(140, 40);
+            this.buttonHastaEkle.Size = new System.Drawing.Size(200, 40);
             this.buttonHastaEkle.TabIndex = 12;
             this.buttonHastaEkle.Text = "EKLE";
             this.buttonHastaEkle.UseVisualStyleBackColor = true;
@@ -66,32 +66,32 @@ namespace HastaneRandevuSistemiUI
             // 
             // textBoxHastaEmailEkle
             // 
-            this.textBoxHastaEmailEkle.Location = new System.Drawing.Point(104, 236);
+            this.textBoxHastaEmailEkle.Location = new System.Drawing.Point(226, 241);
             this.textBoxHastaEmailEkle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHastaEmailEkle.Name = "textBoxHastaEmailEkle";
-            this.textBoxHastaEmailEkle.Size = new System.Drawing.Size(140, 20);
+            this.textBoxHastaEmailEkle.Size = new System.Drawing.Size(200, 20);
             this.textBoxHastaEmailEkle.TabIndex = 9;
             // 
             // textBoxHastaSoyadiEkle
             // 
-            this.textBoxHastaSoyadiEkle.Location = new System.Drawing.Point(104, 143);
+            this.textBoxHastaSoyadiEkle.Location = new System.Drawing.Point(226, 148);
             this.textBoxHastaSoyadiEkle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHastaSoyadiEkle.Name = "textBoxHastaSoyadiEkle";
-            this.textBoxHastaSoyadiEkle.Size = new System.Drawing.Size(140, 20);
+            this.textBoxHastaSoyadiEkle.Size = new System.Drawing.Size(200, 20);
             this.textBoxHastaSoyadiEkle.TabIndex = 7;
             // 
             // textBoxHastaAdiEkle
             // 
-            this.textBoxHastaAdiEkle.Location = new System.Drawing.Point(104, 100);
+            this.textBoxHastaAdiEkle.Location = new System.Drawing.Point(226, 105);
             this.textBoxHastaAdiEkle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHastaAdiEkle.Name = "textBoxHastaAdiEkle";
-            this.textBoxHastaAdiEkle.Size = new System.Drawing.Size(140, 20);
+            this.textBoxHastaAdiEkle.Size = new System.Drawing.Size(200, 20);
             this.textBoxHastaAdiEkle.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 240);
+            this.label5.Location = new System.Drawing.Point(142, 245);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
@@ -101,7 +101,7 @@ namespace HastaneRandevuSistemiUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 194);
+            this.label4.Location = new System.Drawing.Point(142, 199);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
@@ -111,7 +111,7 @@ namespace HastaneRandevuSistemiUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 143);
+            this.label3.Location = new System.Drawing.Point(142, 148);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
@@ -121,7 +121,7 @@ namespace HastaneRandevuSistemiUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 100);
+            this.label2.Location = new System.Drawing.Point(142, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
@@ -140,14 +140,16 @@ namespace HastaneRandevuSistemiUI
             this.dataGridViewHastalariListele.AllowUserToAddRows = false;
             this.dataGridViewHastalariListele.AllowUserToDeleteRows = false;
             this.dataGridViewHastalariListele.AllowUserToOrderColumns = true;
+            this.dataGridViewHastalariListele.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridViewHastalariListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHastalariListele.GridColor = System.Drawing.Color.Purple;
             this.dataGridViewHastalariListele.Location = new System.Drawing.Point(7, 39);
             this.dataGridViewHastalariListele.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewHastalariListele.Name = "dataGridViewHastalariListele";
             this.dataGridViewHastalariListele.ReadOnly = true;
             this.dataGridViewHastalariListele.RowHeadersWidth = 51;
             this.dataGridViewHastalariListele.RowTemplate.Height = 24;
-            this.dataGridViewHastalariListele.Size = new System.Drawing.Size(615, 344);
+            this.dataGridViewHastalariListele.Size = new System.Drawing.Size(800, 400);
             this.dataGridViewHastalariListele.TabIndex = 0;
             // 
             // menuStrip1
@@ -156,7 +158,7 @@ namespace HastaneRandevuSistemiUI
             this.anaSayfayaDonToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(2, 2);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(788, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(822, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,13 +170,14 @@ namespace HastaneRandevuSistemiUI
             this.tabPageHastaListele.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageHastaListele.Name = "tabPageHastaListele";
             this.tabPageHastaListele.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageHastaListele.Size = new System.Drawing.Size(792, 424);
+            this.tabPageHastaListele.Size = new System.Drawing.Size(826, 485);
             this.tabPageHastaListele.TabIndex = 0;
             this.tabPageHastaListele.Text = "Hasta Listesi";
             this.tabPageHastaListele.UseVisualStyleBackColor = true;
             // 
             // tabPageHastaEkle
             // 
+            this.tabPageHastaEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tabPageHastaEkle.Controls.Add(this.maskedTextBoxHastaTelEkle);
             this.tabPageHastaEkle.Controls.Add(this.textBoxHastaTCNoEkle);
             this.tabPageHastaEkle.Controls.Add(this.label6);
@@ -190,10 +193,35 @@ namespace HastaneRandevuSistemiUI
             this.tabPageHastaEkle.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageHastaEkle.Name = "tabPageHastaEkle";
             this.tabPageHastaEkle.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageHastaEkle.Size = new System.Drawing.Size(792, 424);
+            this.tabPageHastaEkle.Size = new System.Drawing.Size(826, 485);
             this.tabPageHastaEkle.TabIndex = 1;
             this.tabPageHastaEkle.Text = "Hasta Ekle";
-            this.tabPageHastaEkle.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBoxHastaTelEkle
+            // 
+            this.maskedTextBoxHastaTelEkle.Location = new System.Drawing.Point(226, 196);
+            this.maskedTextBoxHastaTelEkle.Margin = new System.Windows.Forms.Padding(2);
+            this.maskedTextBoxHastaTelEkle.Name = "maskedTextBoxHastaTelEkle";
+            this.maskedTextBoxHastaTelEkle.Size = new System.Drawing.Size(200, 20);
+            this.maskedTextBoxHastaTelEkle.TabIndex = 18;
+            // 
+            // textBoxHastaTCNoEkle
+            // 
+            this.textBoxHastaTCNoEkle.Location = new System.Drawing.Point(226, 56);
+            this.textBoxHastaTCNoEkle.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxHastaTCNoEkle.Name = "textBoxHastaTCNoEkle";
+            this.textBoxHastaTCNoEkle.Size = new System.Drawing.Size(200, 20);
+            this.textBoxHastaTCNoEkle.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(144, 56);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "TC Kimlik No : ";
             // 
             // tabControlHastalar
             // 
@@ -204,44 +232,18 @@ namespace HastaneRandevuSistemiUI
             this.tabControlHastalar.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlHastalar.Name = "tabControlHastalar";
             this.tabControlHastalar.SelectedIndex = 0;
-            this.tabControlHastalar.Size = new System.Drawing.Size(800, 450);
+            this.tabControlHastalar.Size = new System.Drawing.Size(834, 511);
             this.tabControlHastalar.TabIndex = 1;
             this.tabControlHastalar.SelectedIndexChanged += new System.EventHandler(this.tabControlHastalar_SelectedIndexChanged);
-            // 
-            // textBoxHastaTCNoEkle
-            // 
-            this.textBoxHastaTCNoEkle.Location = new System.Drawing.Point(104, 51);
-            this.textBoxHastaTCNoEkle.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxHastaTCNoEkle.Name = "textBoxHastaTCNoEkle";
-            this.textBoxHastaTCNoEkle.Size = new System.Drawing.Size(140, 20);
-            this.textBoxHastaTCNoEkle.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 51);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "TC Kimlik No : ";
-            // 
-            // maskedTextBoxHastaTelEkle
-            // 
-            this.maskedTextBoxHastaTelEkle.Location = new System.Drawing.Point(104, 191);
-            this.maskedTextBoxHastaTelEkle.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBoxHastaTelEkle.Name = "maskedTextBoxHastaTelEkle";
-            this.maskedTextBoxHastaTelEkle.Size = new System.Drawing.Size(140, 20);
-            this.maskedTextBoxHastaTelEkle.TabIndex = 18;
             // 
             // FormHastalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.tabControlHastalar);
             this.Name = "FormHastalar";
-            this.Text = "FormHastalar";
+            this.Text = "Hasta İşlemleri";
             this.Load += new System.EventHandler(this.FormHastalar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHastalariListele)).EndInit();
             this.menuStrip1.ResumeLayout(false);

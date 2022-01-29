@@ -28,6 +28,7 @@ namespace HastaneRandevuSistemiUI
         private void FormHastalar_Load(object sender, EventArgs e)
         {
             DataGrideTumHastalariGetir();
+            maskedTextBoxHastaTelEkle.Mask = @"\0\5##-###-##-##";
         }
 
         private void DataGrideTumHastalariGetir()

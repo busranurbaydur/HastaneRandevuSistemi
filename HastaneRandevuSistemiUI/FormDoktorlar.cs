@@ -97,6 +97,10 @@ namespace HastaneRandevuSistemiUI
         private void DoktorGrideVerileriGetir()
         {
            dataGridViewDoktorListele.DataSource =drManager.TumAktifDoktorlariGetir();
+            dataGridViewDoktorListele.Columns["AktifMi"].Width = 50;
+            dataGridViewDoktorListele.Columns["DoktorId"].Width = 30;
+            dataGridViewDoktorListele.Columns["DoktorAdi"].Width = 80;
+            dataGridViewDoktorListele.Columns["DoktorSoyadi"].Width = 80;
         }
 
         private void DoktorEkleSayfasiTemizle()

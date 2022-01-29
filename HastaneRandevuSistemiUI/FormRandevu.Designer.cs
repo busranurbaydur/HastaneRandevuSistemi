@@ -106,9 +106,9 @@ namespace HastaneRandevuSistemiUI
             this.listViewAlinanRandevular.FullRowSelect = true;
             this.listViewAlinanRandevular.GridLines = true;
             this.listViewAlinanRandevular.HideSelection = false;
-            this.listViewAlinanRandevular.Location = new System.Drawing.Point(17, 384);
+            this.listViewAlinanRandevular.Location = new System.Drawing.Point(5, 384);
             this.listViewAlinanRandevular.Name = "listViewAlinanRandevular";
-            this.listViewAlinanRandevular.Size = new System.Drawing.Size(520, 127);
+            this.listViewAlinanRandevular.Size = new System.Drawing.Size(520, 130);
             this.listViewAlinanRandevular.TabIndex = 1;
             this.listViewAlinanRandevular.UseCompatibleStateImageBehavior = false;
             this.listViewAlinanRandevular.View = System.Windows.Forms.View.Details;
@@ -116,22 +116,22 @@ namespace HastaneRandevuSistemiUI
             // columnHeader1
             // 
             this.columnHeader1.Text = "Servis";
-            this.columnHeader1.Width = 77;
+            this.columnHeader1.Width = 110;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Doktor";
-            this.columnHeader2.Width = 82;
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Hasta";
-            this.columnHeader3.Width = 71;
+            this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Randevu Tarihi";
-            this.columnHeader4.Width = 134;
+            this.columnHeader4.Width = 140;
             // 
             // groupBoxServis
             // 
@@ -143,7 +143,7 @@ namespace HastaneRandevuSistemiUI
             this.groupBoxServis.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxServis.Name = "groupBoxServis";
             this.groupBoxServis.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxServis.Size = new System.Drawing.Size(270, 328);
+            this.groupBoxServis.Size = new System.Drawing.Size(250, 320);
             this.groupBoxServis.TabIndex = 0;
             this.groupBoxServis.TabStop = false;
             this.groupBoxServis.Text = "Servis Ve Doktor Seçimi";
@@ -164,7 +164,7 @@ namespace HastaneRandevuSistemiUI
             this.listBoxDoktorlar.Location = new System.Drawing.Point(7, 100);
             this.listBoxDoktorlar.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxDoktorlar.Name = "listBoxDoktorlar";
-            this.listBoxDoktorlar.Size = new System.Drawing.Size(242, 212);
+            this.listBoxDoktorlar.Size = new System.Drawing.Size(230, 199);
             this.listBoxDoktorlar.TabIndex = 3;
             this.listBoxDoktorlar.SelectedIndexChanged += new System.EventHandler(this.listBoxDoktorlar_SelectedIndexChanged);
             // 
@@ -198,19 +198,20 @@ namespace HastaneRandevuSistemiUI
             this.groupBoxRandevu.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxRandevu.Name = "groupBoxRandevu";
             this.groupBoxRandevu.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxRandevu.Size = new System.Drawing.Size(344, 404);
+            this.groupBoxRandevu.Size = new System.Drawing.Size(350, 475);
             this.groupBoxRandevu.TabIndex = 0;
             this.groupBoxRandevu.TabStop = false;
             this.groupBoxRandevu.Text = "Randevu Tarih ve Saat İşlemleri";
             // 
             // buttonRandevuAl
             // 
-            this.buttonRandevuAl.Location = new System.Drawing.Point(42, 334);
+            this.buttonRandevuAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.buttonRandevuAl.Location = new System.Drawing.Point(30, 368);
             this.buttonRandevuAl.Name = "buttonRandevuAl";
-            this.buttonRandevuAl.Size = new System.Drawing.Size(217, 36);
+            this.buttonRandevuAl.Size = new System.Drawing.Size(299, 63);
             this.buttonRandevuAl.TabIndex = 3;
-            this.buttonRandevuAl.Text = "Randevu Al";
-            this.buttonRandevuAl.UseVisualStyleBackColor = true;
+            this.buttonRandevuAl.Text = "RANDEVU AL";
+            this.buttonRandevuAl.UseVisualStyleBackColor = false;
             this.buttonRandevuAl.Click += new System.EventHandler(this.buttonRandevuAl_Click);
             // 
             // ucRandevuSaat1
@@ -223,13 +224,13 @@ namespace HastaneRandevuSistemiUI
             this.ucRandevuSaat1.Name = "ucRandevuSaat1";
             this.ucRandevuSaat1.RandevuAlmaAktifMi = false;
             this.ucRandevuSaat1.SecilenRandevuTarihi = new System.DateTime(((long)(0)));
-            this.ucRandevuSaat1.Size = new System.Drawing.Size(299, 242);
+            this.ucRandevuSaat1.Size = new System.Drawing.Size(299, 249);
             this.ucRandevuSaat1.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 32);
+            this.label4.Location = new System.Drawing.Point(27, 35);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 13);
@@ -238,10 +239,10 @@ namespace HastaneRandevuSistemiUI
             // 
             // dateTimePickerRandevuTarihiAyarla
             // 
-            this.dateTimePickerRandevuTarihiAyarla.Location = new System.Drawing.Point(108, 32);
+            this.dateTimePickerRandevuTarihiAyarla.Location = new System.Drawing.Point(132, 32);
             this.dateTimePickerRandevuTarihiAyarla.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerRandevuTarihiAyarla.Name = "dateTimePickerRandevuTarihiAyarla";
-            this.dateTimePickerRandevuTarihiAyarla.Size = new System.Drawing.Size(151, 20);
+            this.dateTimePickerRandevuTarihiAyarla.Size = new System.Drawing.Size(197, 20);
             this.dateTimePickerRandevuTarihiAyarla.TabIndex = 0;
             this.dateTimePickerRandevuTarihiAyarla.ValueChanged += new System.EventHandler(this.dateTimePickerRandevuTarihiAyarla_ValueChanged);
             // 
@@ -250,11 +251,11 @@ namespace HastaneRandevuSistemiUI
             this.groupBoxHastaIslemleri.Controls.Add(this.listBoxHastalar);
             this.groupBoxHastaIslemleri.Controls.Add(this.label1);
             this.groupBoxHastaIslemleri.Controls.Add(this.textBoxHastaTCArama);
-            this.groupBoxHastaIslemleri.Location = new System.Drawing.Point(4, 39);
+            this.groupBoxHastaIslemleri.Location = new System.Drawing.Point(5, 39);
             this.groupBoxHastaIslemleri.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxHastaIslemleri.Name = "groupBoxHastaIslemleri";
             this.groupBoxHastaIslemleri.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxHastaIslemleri.Size = new System.Drawing.Size(262, 328);
+            this.groupBoxHastaIslemleri.Size = new System.Drawing.Size(250, 320);
             this.groupBoxHastaIslemleri.TabIndex = 0;
             this.groupBoxHastaIslemleri.TabStop = false;
             this.groupBoxHastaIslemleri.Text = "Hasta İşlemleri";
@@ -262,10 +263,10 @@ namespace HastaneRandevuSistemiUI
             // listBoxHastalar
             // 
             this.listBoxHastalar.FormattingEnabled = true;
-            this.listBoxHastalar.Location = new System.Drawing.Point(13, 100);
+            this.listBoxHastalar.Location = new System.Drawing.Point(7, 100);
             this.listBoxHastalar.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxHastalar.Name = "listBoxHastalar";
-            this.listBoxHastalar.Size = new System.Drawing.Size(234, 212);
+            this.listBoxHastalar.Size = new System.Drawing.Size(230, 199);
             this.listBoxHastalar.TabIndex = 2;
             this.listBoxHastalar.SelectedIndexChanged += new System.EventHandler(this.listBoxHastalar_SelectedIndexChanged);
             // 
@@ -301,12 +302,13 @@ namespace HastaneRandevuSistemiUI
             // anaSayfayaDonToolStripMenuItem
             // 
             this.anaSayfayaDonToolStripMenuItem.Name = "anaSayfayaDonToolStripMenuItem";
-            this.anaSayfayaDonToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.anaSayfayaDonToolStripMenuItem.Text = "AnaSayfaya Don";
+            this.anaSayfayaDonToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.anaSayfayaDonToolStripMenuItem.Text = "Anasayfaya Dön";
             this.anaSayfayaDonToolStripMenuItem.Click += new System.EventHandler(this.anaSayfayaDonToolStripMenuItem_Click);
             // 
             // tabPageCiktiAl
             // 
+            this.tabPageCiktiAl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabPageCiktiAl.Controls.Add(this.label6);
             this.tabPageCiktiAl.Controls.Add(this.dateTimePickerCiktiAl);
             this.tabPageCiktiAl.Controls.Add(this.btnCiktiAl);
@@ -319,13 +321,12 @@ namespace HastaneRandevuSistemiUI
             this.tabPageCiktiAl.Size = new System.Drawing.Size(954, 575);
             this.tabPageCiktiAl.TabIndex = 1;
             this.tabPageCiktiAl.Text = "Çıktı Al";
-            this.tabPageCiktiAl.UseVisualStyleBackColor = true;
             this.tabPageCiktiAl.Leave += new System.EventHandler(this.tabPageCiktiAl_Leave);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 88);
+            this.label6.Location = new System.Drawing.Point(40, 89);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 13);
@@ -337,16 +338,16 @@ namespace HastaneRandevuSistemiUI
             this.dateTimePickerCiktiAl.Location = new System.Drawing.Point(149, 83);
             this.dateTimePickerCiktiAl.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerCiktiAl.Name = "dateTimePickerCiktiAl";
-            this.dateTimePickerCiktiAl.Size = new System.Drawing.Size(151, 20);
+            this.dateTimePickerCiktiAl.Size = new System.Drawing.Size(256, 20);
             this.dateTimePickerCiktiAl.TabIndex = 8;
             this.dateTimePickerCiktiAl.ValueChanged += new System.EventHandler(this.dateTimePickerCiktiAl_ValueChanged);
             // 
             // btnCiktiAl
             // 
-            this.btnCiktiAl.Location = new System.Drawing.Point(52, 127);
+            this.btnCiktiAl.Location = new System.Drawing.Point(149, 141);
             this.btnCiktiAl.Margin = new System.Windows.Forms.Padding(2);
             this.btnCiktiAl.Name = "btnCiktiAl";
-            this.btnCiktiAl.Size = new System.Drawing.Size(353, 39);
+            this.btnCiktiAl.Size = new System.Drawing.Size(256, 46);
             this.btnCiktiAl.TabIndex = 7;
             this.btnCiktiAl.Text = "DOKTOR RANDEVU ÇIKTISI AL";
             this.btnCiktiAl.UseVisualStyleBackColor = true;
@@ -380,7 +381,7 @@ namespace HastaneRandevuSistemiUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 609);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRandevu";

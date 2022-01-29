@@ -45,7 +45,7 @@ namespace HastaneRandevuSistemiUI
             // 
             this.labelHasta.AutoSize = true;
             this.labelHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelHasta.Location = new System.Drawing.Point(81, 160);
+            this.labelHasta.Location = new System.Drawing.Point(111, 215);
             this.labelHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHasta.Name = "labelHasta";
             this.labelHasta.Size = new System.Drawing.Size(117, 63);
@@ -54,20 +54,20 @@ namespace HastaneRandevuSistemiUI
             // 
             // btnDurdur
             // 
-            this.btnDurdur.Location = new System.Drawing.Point(477, 89);
+            this.btnDurdur.Location = new System.Drawing.Point(598, 104);
             this.btnDurdur.Margin = new System.Windows.Forms.Padding(2);
             this.btnDurdur.Name = "btnDurdur";
-            this.btnDurdur.Size = new System.Drawing.Size(73, 36);
+            this.btnDurdur.Size = new System.Drawing.Size(120, 60);
             this.btnDurdur.TabIndex = 8;
             this.btnDurdur.Text = "DURDUR";
             this.btnDurdur.UseVisualStyleBackColor = true;
             // 
             // btnBasla
             // 
-            this.btnBasla.Location = new System.Drawing.Point(349, 89);
+            this.btnBasla.Location = new System.Drawing.Point(433, 104);
             this.btnBasla.Margin = new System.Windows.Forms.Padding(2);
             this.btnBasla.Name = "btnBasla";
-            this.btnBasla.Size = new System.Drawing.Size(73, 36);
+            this.btnBasla.Size = new System.Drawing.Size(120, 60);
             this.btnBasla.TabIndex = 7;
             this.btnBasla.Text = "BAŞLA";
             this.btnBasla.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace HastaneRandevuSistemiUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 67);
+            this.label1.Location = new System.Drawing.Point(49, 82);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
@@ -85,7 +85,7 @@ namespace HastaneRandevuSistemiUI
             // comboBoxDoktor
             // 
             this.comboBoxDoktor.FormattingEnabled = true;
-            this.comboBoxDoktor.Location = new System.Drawing.Point(14, 104);
+            this.comboBoxDoktor.Location = new System.Drawing.Point(52, 125);
             this.comboBoxDoktor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxDoktor.Name = "comboBoxDoktor";
             this.comboBoxDoktor.Size = new System.Drawing.Size(269, 21);
@@ -97,7 +97,7 @@ namespace HastaneRandevuSistemiUI
             this.anasayfaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(834, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,7 +112,8 @@ namespace HastaneRandevuSistemiUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.labelHasta);
             this.Controls.Add(this.btnDurdur);
             this.Controls.Add(this.btnBasla);
@@ -121,7 +122,7 @@ namespace HastaneRandevuSistemiUI
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormHastaCagir";
-            this.Text = "FormHastaCagir";
+            this.Text = "Hasta Çağırma Ekranı";
             this.Load += new System.EventHandler(this.FormHastaCagir_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
