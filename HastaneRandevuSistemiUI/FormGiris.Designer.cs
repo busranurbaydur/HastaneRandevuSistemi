@@ -38,7 +38,7 @@ namespace HastaneRandevuSistemiUI
             // buttonDoktorIslemleri
             // 
             this.buttonDoktorIslemleri.Location = new System.Drawing.Point(98, 27);
-            this.buttonDoktorIslemleri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDoktorIslemleri.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDoktorIslemleri.Name = "buttonDoktorIslemleri";
             this.buttonDoktorIslemleri.Size = new System.Drawing.Size(192, 80);
             this.buttonDoktorIslemleri.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace HastaneRandevuSistemiUI
             // buttonHastaIslemleri
             // 
             this.buttonHastaIslemleri.Location = new System.Drawing.Point(98, 128);
-            this.buttonHastaIslemleri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHastaIslemleri.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHastaIslemleri.Name = "buttonHastaIslemleri";
             this.buttonHastaIslemleri.Size = new System.Drawing.Size(192, 80);
             this.buttonHastaIslemleri.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace HastaneRandevuSistemiUI
             // buttonRandevuIslemleri
             // 
             this.buttonRandevuIslemleri.Location = new System.Drawing.Point(98, 228);
-            this.buttonRandevuIslemleri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRandevuIslemleri.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRandevuIslemleri.Name = "buttonRandevuIslemleri";
             this.buttonRandevuIslemleri.Size = new System.Drawing.Size(192, 86);
             this.buttonRandevuIslemleri.TabIndex = 2;
@@ -88,9 +88,10 @@ namespace HastaneRandevuSistemiUI
             this.Controls.Add(this.buttonRandevuIslemleri);
             this.Controls.Add(this.buttonHastaIslemleri);
             this.Controls.Add(this.buttonDoktorIslemleri);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormGiris";
             this.Text = "Busra Hastanesine Hoşgeldiniz..";
+            this.Load += new System.EventHandler(this.FormGiris_Load);
             this.ResumeLayout(false);
 
         }

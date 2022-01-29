@@ -38,5 +38,21 @@ namespace HastaneRandevuSistemiBusiness
                 throw ex;
             }
         }
+
+        public bool YeniHastaEkle(Hasta hasta)
+        {
+            try
+            {
+                myDbContext.Hastalar.Add(hasta);
+                myDbContext.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
     }
 }

@@ -26,7 +26,9 @@ namespace HastaneRandevuSistemiUI
 
         private void buttonHastaIslemleri_Click(object sender, EventArgs e)
         {
-            
+            FormHastalar frmHasta = new FormHastalar();
+            this.Hide();
+            frmHasta.Show();
         }
 
         private void buttonRandevuIslemleri_Click(object sender, EventArgs e)
@@ -41,6 +43,11 @@ namespace HastaneRandevuSistemiUI
             FormHastaCagir frmHastaCagir = new FormHastaCagir();
             this.Hide();
             frmHastaCagir.Show();
+        }
+
+        private void FormGiris_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,6 +74,12 @@
     <Compile Include="FormHastaCagir.Designer.cs">
       <DependentUpon>FormHastaCagir.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHastalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHastalar.Designer.cs">
+      <DependentUpon>FormHastalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormRandevu.cs">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHastaCagir.resx">
       <DependentUpon>FormHastaCagir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHastalar.resx">
+      <DependentUpon>FormHastalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
