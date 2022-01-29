@@ -178,9 +178,10 @@ namespace HastaneRandevuSistemiUI
                 }
                 if (!ucRandevuSaat1.RandevuAlmaAktifMi)
                 {
-                    MessageBox.Show("Randevu alabilmeniz için yukarıdaki randevu saati butonlarına tıklayarak saat seçmelisiniz.", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Randevu alabilmeniz için yukarıdaki randevu saati butonlarına tıklayarak saat seçmelisiniz!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
+
                 //Hastanın o tarihe o saate başka randevusu varsa alamaz
                 Hasta secilenHasta = listBoxHastalar.SelectedItem as Hasta;
                 //dikkat etmek gerekli?
@@ -202,11 +203,15 @@ namespace HastaneRandevuSistemiUI
                 if (rndAlindiMi)
                 {
                     MessageBox.Show($"Randevunuz alınmıştır", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Alınan randevuyu ListView'e ekleyelim:
+
+                    //alınan randevuyu listviewe ekleyelim
                     ListVieweRandevuyuEkle(yeniRandevu);
+
                     // temizlik
                     ucRandevuSaat1.Temizle();
-                    //dateTimePickerRandevuTarihiAyarla.Value = DateTime.Now;
+                    // bak betül
+                    //dateTimePickerRandevuTarihi.Value =
+                    //  DateTime.Now.AddMinutes(+1);
                     RandevuGroupBoxPasiflestir();
                     ServisGroupBoxPasiflestir();
                     listBoxHastalar.SelectedIndex = -1;
@@ -222,6 +227,7 @@ namespace HastaneRandevuSistemiUI
 
                 MessageBox.Show("HATA : " + ex.Message);
             }
+
         }
        
         private void ListVieweRandevuyuEkle(Randevu yeniRandevu)
@@ -231,7 +237,8 @@ namespace HastaneRandevuSistemiUI
             li.Text = randevu.Servis;
             li.SubItems.Add(randevu.DoktorAdSoyad);
             li.SubItems.Add(randevu.HastaAdSoyad);
-            li.SubItems.Add(randevu.RandevuTarihi.ToString("dd.MM.yyyy HH:mm"));
+            li.SubItems.Add(
+                randevu.RandevuTarihi.ToString("dd.MM.yyyy HH:mm"));
             li.Tag = randevu;
             listViewAlinanRandevular.Items.Add(li);
         }

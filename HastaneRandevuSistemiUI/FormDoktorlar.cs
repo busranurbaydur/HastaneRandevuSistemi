@@ -72,7 +72,7 @@ namespace HastaneRandevuSistemiUI
                     Telefon = maskedTextBoxDoktorTelEkle.Text.Replace("-", ""),
                     TCNumarasi = textBoxDoktorTcEkle.Text,
                     Brans = drBransi,
-                    // AktifMi = true
+                    AktifMi = true
                 };
                 //sisteme ekleme yapması gerekiyor..
 

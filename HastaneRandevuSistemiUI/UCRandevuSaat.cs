@@ -42,7 +42,8 @@ namespace HastaneRandevuSistemiUI
             //yeni ekledim
             Doktorum = null;
             DRveTrhyeGoreButonlarinAktifPasifIslemleriniYap();
-            timer1.Interval = 1000;
+            //
+            timer1.Interval = 10;
             timer1.Enabled = true;
         }
 
@@ -114,7 +115,7 @@ namespace HastaneRandevuSistemiUI
 
         private void DRveTrhyeGoreButonlarinAktifPasifIslemleriniYap()
         {
-            try
+           try
             {
                 // yeni ekledim 2
                 RandevuButonlariniAktiflestir();
@@ -181,16 +182,16 @@ namespace HastaneRandevuSistemiUI
                     switch (item.Name)
                     {
 
-                        case "btn00":
+                        case "button00":
                             button00.Text = $"{saatim}:00"; //09:00
                             break;
-                        case "btn15":
+                        case "button15":
                             button15.Text = $"{saatim}:15";//09:15
                             break;
-                        case "btn30":
+                        case "button30":
                             button30.Text = $"{saatim}:30";//09:30
                             break;
-                        case "btn45":
+                        case "button45":
                             button45.Text = $"{saatim}:45";//09:45
                             break;
                         default:

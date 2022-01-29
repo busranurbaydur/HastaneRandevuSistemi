@@ -42,6 +42,7 @@ namespace HastaneRandevuSistemiUI
             this.comboBoxServisSec = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxRandevu = new System.Windows.Forms.GroupBox();
+            this.buttonRandevuAl = new System.Windows.Forms.Button();
             this.ucRandevuSaat1 = new HastaneRandevuSistemiUI.UCRandevuSaat();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePickerRandevuTarihiAyarla = new System.Windows.Forms.DateTimePicker();
@@ -58,7 +59,6 @@ namespace HastaneRandevuSistemiUI
             this.comboBoxCiktiAlDrSec = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.buttonRandevuAl = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageRandevuIslem.SuspendLayout();
             this.groupBoxServis.SuspendLayout();
@@ -103,28 +103,35 @@ namespace HastaneRandevuSistemiUI
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.listViewAlinanRandevular.FullRowSelect = true;
+            this.listViewAlinanRandevular.GridLines = true;
             this.listViewAlinanRandevular.HideSelection = false;
             this.listViewAlinanRandevular.Location = new System.Drawing.Point(17, 384);
             this.listViewAlinanRandevular.Name = "listViewAlinanRandevular";
             this.listViewAlinanRandevular.Size = new System.Drawing.Size(520, 127);
             this.listViewAlinanRandevular.TabIndex = 1;
             this.listViewAlinanRandevular.UseCompatibleStateImageBehavior = false;
+            this.listViewAlinanRandevular.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Doktor";
+            this.columnHeader1.Text = "Servis";
+            this.columnHeader1.Width = 77;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Hasta";
+            this.columnHeader2.Text = "Doktor";
+            this.columnHeader2.Width = 82;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Servis";
+            this.columnHeader3.Text = "Hasta";
+            this.columnHeader3.Width = 71;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Randevu Tarihi";
+            this.columnHeader4.Width = 134;
             // 
             // groupBoxServis
             // 
@@ -195,6 +202,16 @@ namespace HastaneRandevuSistemiUI
             this.groupBoxRandevu.TabIndex = 0;
             this.groupBoxRandevu.TabStop = false;
             this.groupBoxRandevu.Text = "Randevu Tarih ve Saat İşlemleri";
+            // 
+            // buttonRandevuAl
+            // 
+            this.buttonRandevuAl.Location = new System.Drawing.Point(42, 334);
+            this.buttonRandevuAl.Name = "buttonRandevuAl";
+            this.buttonRandevuAl.Size = new System.Drawing.Size(217, 36);
+            this.buttonRandevuAl.TabIndex = 3;
+            this.buttonRandevuAl.Text = "Randevu Al";
+            this.buttonRandevuAl.UseVisualStyleBackColor = true;
+            this.buttonRandevuAl.Click += new System.EventHandler(this.buttonRandevuAl_Click);
             // 
             // ucRandevuSaat1
             // 
@@ -358,16 +375,6 @@ namespace HastaneRandevuSistemiUI
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // buttonRandevuAl
-            // 
-            this.buttonRandevuAl.Location = new System.Drawing.Point(42, 334);
-            this.buttonRandevuAl.Name = "buttonRandevuAl";
-            this.buttonRandevuAl.Size = new System.Drawing.Size(217, 36);
-            this.buttonRandevuAl.TabIndex = 3;
-            this.buttonRandevuAl.Text = "Randevu Al";
-            this.buttonRandevuAl.UseVisualStyleBackColor = true;
-            this.buttonRandevuAl.Click += new System.EventHandler(this.buttonRandevuAl_Click);
             // 
             // FormRandevu
             // 

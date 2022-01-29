@@ -7,13 +7,13 @@ namespace HastaneRandevuSistemiDataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class data : IMigrationMetadata
+    public sealed partial class addtables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(data));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addtables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202201021214151_data"; }
+            get { return "202201291244412_addtables"; }
         }
         
         string IMigrationMetadata.Source

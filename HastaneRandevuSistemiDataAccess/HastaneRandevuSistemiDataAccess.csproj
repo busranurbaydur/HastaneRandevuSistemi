@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202201021214151_data.cs" />
-    <Compile Include="Migrations\202201021214151_data.designer.cs">
-      <DependentUpon>202201021214151_data.cs</DependentUpon>
+    <Compile Include="Migrations\202201291244412_addtables.cs" />
+    <Compile Include="Migrations\202201291244412_addtables.designer.cs">
+      <DependentUpon>202201291244412_addtables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -70,8 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202201021214151_data.resx">
-      <DependentUpon>202201021214151_data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202201291244412_addtables.resx">
+      <DependentUpon>202201291244412_addtables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
